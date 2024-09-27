@@ -1,0 +1,16 @@
+snippet sign "Signature"
+Yours sincerely,
+
+Michael Hernandez
+endsnippet
+
+snippet today "Date"
+`!p import subprocess; snip.rv = subprocess.check_output(['powershell', '-Command', 'Get-Date -Format yyyy-MM-dd']).decode('utf-8').strip()`
+endsnippet
+
+snippet box "Box"
+`!p snip.rv = '┌' + '─' * (len(t[1]) + 2) + '┐'`
+│ $1 │
+`!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
+$0
+endsnippet
